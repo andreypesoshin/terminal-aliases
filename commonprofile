@@ -1,0 +1,30 @@
+# Some good standards, which are not used if the user
+# creates his/her own .bashrc/.bash_profile
+
+# --show-control-chars: help showing Korean or accented characters
+alias ls='ls -F --color=auto --show-control-chars'
+alias ll='ls -la'
+
+# ----------------------
+# Git Aliases
+# ----------------------
+alias ga='git add'
+alias gaa='git add .'
+alias gb='git branch'
+alias gbd='git branch --delete '
+alias gc='git commit'
+alias gcm='git commit --message'
+alias gcam='git commit -a -m'
+alias gco='git checkout'
+alias gl='git pull'
+alias gd='git diff'
+alias glg='git log --graph --oneline --decorate --all'
+alias gp='git push'
+alias gst='git status'
+
+# ----------------------
+# Git Functions
+# ----------------------
+# Git log find by commit message
+function glf() { git log --all --grep="$1"; }
+
